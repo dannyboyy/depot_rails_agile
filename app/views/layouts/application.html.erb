@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Depot</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<!-- Because Rails loads all of the stylesheets all at once, we need a convention to limit controller-specific rules to pages associated with that controller. Using the controller_name as a class name is an easy way to accomplish that and is what we have done here. -->
+<body class='<%= controller.controller_name %>'>
+
+<%= yield %>
+
+</body>
+</html>
